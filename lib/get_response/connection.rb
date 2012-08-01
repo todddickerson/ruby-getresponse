@@ -83,7 +83,7 @@ module GetResponse
         :params => [@api_key, params]
       }.to_json
 
-      uri = URI.parse(API_URI)
+      uri = URI.parse(@api_uri)
       resp = Net::HTTP.start(uri.host, uri.port) do |conn|
         conn.post("/", request_params)
       end
