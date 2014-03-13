@@ -8,7 +8,7 @@ module GetResponse
 
     attr_reader :api_key
 
-    def initialize(api_key, api_uri = "http://api2.getresponse.com")
+    def initialize(api_key, api_uri = "http://api2.getresponse.com/")
       @api_uri = api_uri
       @api_key = api_key
       @request_id_prefix = "#{Time.now.to_i}-#{rand(1_000_000_000)}"
